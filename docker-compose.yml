@@ -1,0 +1,18 @@
+version: "1"
+
+services:
+  challenge-mongodb-instance:
+    image: mongo:latest
+    container_name: "challenge-mongodb-instance"
+    ports:
+      - 27017:27017
+    restart: always
+    volumes:
+      - ./challenge-init.js:/docker-entrypoint-initdb.d/challenge-init.js
+  oracle-api-challenge:
+    image: oracle-api-challenge:1.0.0
+    container_name: oracle-api-challenge
+    ports:
+      - 8080:8080
+    links:
+      - challenge-mongodb-instance

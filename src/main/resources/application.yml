@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /oracle-employees
+
+spring:
+  data:
+    mongodb:
+      database: test
+      host: challenge-mongodb-instance
+      port: 27017
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
