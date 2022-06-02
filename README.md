@@ -15,7 +15,7 @@ The next are the technologies needed in order to run the project locally:
 2. Apache Maven 3.x.x
 3. Docker v. 20
 
-A MongoDB instance will be embedded at Docker when project running, but isn't required to be installed locally. 
+A MongoDB instance will be embedded at Docker when project running, but isn't needed to install locally any additional stuff (even more, a few records will be loaded when database instance started at Docker).
 
 ### Application Execution
 Assuming the software listed previously is installed on your machine, and Docker service is already running, the steps to run **oracle-api-challenge** application are described below. 
@@ -36,7 +36,7 @@ d) Then, initialize the project instance.
 
 	docker-compose up
 
-The application will run on your local under 8080 port. Also, a 
+The application will run on your local under 8080 port.
 
 For your convenience, this project implements Swagger UI, so you may easily validate all API specifications at http://localhost:8080/oracle-employees/swagger-ui.html
 
@@ -74,6 +74,7 @@ Let's consider the next as the **user data structure**:
  }
 }
 ```
+Even being able to consume the API as described next, remember the project implements **Swagger UI**, so you also have within reach a smart interface and features in order to build requests and consume these REST webservices, through smart and ad hoc web clients.
 
 **Get user by ID** 
 
